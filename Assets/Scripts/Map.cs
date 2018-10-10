@@ -28,8 +28,7 @@ public class Map : MonoBehaviour {
 	}
 
     private void SetInitialCameraLocation() {
-        mainCamera.transform.position = new Vector3(0, 10f, -3f);
-        mainCamera.transform.rotation = Quaternion.Euler(45, 30, 0);
+        mainCamera.transform.position = new Vector3(1.0f, 0.0f, 1.0f);
     }
 
     private float PossibleXOffset(int row) {

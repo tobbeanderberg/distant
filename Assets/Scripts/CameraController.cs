@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-    Rect bounds = new Rect(new Vector2(0.0f, -5.0f), new Vector2(25.0f, 25.0f));
+    Rect bounds = new Rect(new Vector2(3.0f, 3.0f), new Vector2(30.0f, 30.0f));
     float speed = 10;
 
 	void Start () {
@@ -12,20 +12,26 @@ public class CameraController : MonoBehaviour {
 	
 	void Update () {
         if(Input.GetKey(KeyCode.A) == true || Input.GetKey(KeyCode.LeftArrow)) {
-            transform.position += -transform.right * Time.deltaTime * speed;
+            transform.parent.position += -transform.right * Time.deltaTime * speed;
         }
         if (Input.GetKey(KeyCode.D) == true || Input.GetKey(KeyCode.RightArrow)) {
-            transform.position += transform.right * Time.deltaTime * speed;
+            transform.parent.position += transform.right * Time.deltaTime * speed;
         }
         if (Input.GetKey(KeyCode.W) == true || Input.GetKey(KeyCode.UpArrow)) {
-            transform.position += ForwardDirection(transform) * Time.deltaTime * speed;
+            transform.parent.position += ForwardDirection(transform) * Time.deltaTime * speed;
         }
         if (Input.GetKey(KeyCode.S) == true || Input.GetKey(KeyCode.DownArrow)) {
-            transform.position += -ForwardDirection(transform) * Time.deltaTime * speed;
+            transform.parent.position += -ForwardDirection(transform) * Time.deltaTime * speed;
         }
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, bounds.xMin, bounds.xMax),
-                                         transform.position.y,
-                                         Mathf.Clamp(transform.position.z, bounds.yMin, bounds.yMax));
+        if (Input.GetKeyDown(KeyCode.E) == true) {
+            transform.RotateAround(transform.parent.position, transform.parent.up, -90.0f);
+        }
+        if (Input.GetKeyDown(KeyCode.Q) == true) {
+            transform.RotateAround(transform.parent.position, transform.parent.up, 90.0f);
+        }
+        transform.parent.position = new Vector3(Mathf.Clamp(transform.parent.position.x, bounds.xMin, bounds.xMax),
+                                                transform.parent.position.y,
+                                                Mathf.Clamp(transform.parent.position.z, bounds.yMin, bounds.yMax));
 	}
 
     private Vector3 ForwardDirection(Transform focus) {
