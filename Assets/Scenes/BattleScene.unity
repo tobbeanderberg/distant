@@ -291,9 +291,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexPrefab: {fileID: 1074900997238668, guid: b0fa12c95c0f74490bd062da7dc0bdde, type: 2}
-  camera: {fileID: 282840810}
-  width: 10
-  height: 10
+  mainCamera: {fileID: 282840810}
+  numTilesX: 20
+  numTilesY: 20
 --- !u!4 &1139264226
 Transform:
   m_ObjectHideFlags: 0
