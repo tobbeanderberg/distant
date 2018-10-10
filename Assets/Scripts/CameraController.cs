@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
+    Rect bounds = new Rect(new Vector2(0.0f, -5.0f), new Vector2(25.0f, 25.0f));
     float speed = 10;
 
 	void Start () {
@@ -22,6 +23,9 @@ public class CameraController : MonoBehaviour {
         if (Input.GetKey(KeyCode.S) == true || Input.GetKey(KeyCode.DownArrow)) {
             transform.position += -ForwardDirection(transform) * Time.deltaTime * speed;
         }
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, bounds.xMin, bounds.xMax),
+                                         transform.position.y,
+                                         Mathf.Clamp(transform.position.z, bounds.yMin, bounds.yMax));
 	}
 
     private Vector3 ForwardDirection(Transform focus) {
