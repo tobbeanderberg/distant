@@ -1,0 +1,9 @@
+Temp/
+Packages/
+Library/
+Obj/
+
+# Visual Studio Stuff
+*.csproj
+*.sln
+.vs/
