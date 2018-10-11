@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-    Rect bounds = new Rect(new Vector2(3.0f, 3.0f), new Vector2(30.0f, 30.0f));
-    float speed = 10;
+    public GameSettings settings;
 
-	void Start () {
-	}
-	
+    private Rect bounds = new Rect(new Vector2(3.0f, 3.0f), new Vector2(30.0f, 30.0f));
+    private float cameraSpeed = 10.0f;
+
 	void Update () {
         if(Input.GetKey(KeyCode.A) == true || Input.GetKey(KeyCode.LeftArrow)) {
-            transform.parent.position += -transform.right * Time.deltaTime * speed;
+            transform.parent.position += -transform.right * Time.deltaTime * cameraSpeed;
         }
         if (Input.GetKey(KeyCode.D) == true || Input.GetKey(KeyCode.RightArrow)) {
-            transform.parent.position += transform.right * Time.deltaTime * speed;
+            transform.parent.position += transform.right * Time.deltaTime * cameraSpeed;
         }
         if (Input.GetKey(KeyCode.W) == true || Input.GetKey(KeyCode.UpArrow)) {
-            transform.parent.position += ForwardDirection(transform) * Time.deltaTime * speed;
+            transform.parent.position += ForwardDirection(transform) * Time.deltaTime * cameraSpeed;
         }
         if (Input.GetKey(KeyCode.S) == true || Input.GetKey(KeyCode.DownArrow)) {
-            transform.parent.position += -ForwardDirection(transform) * Time.deltaTime * speed;
+            transform.parent.position += -ForwardDirection(transform) * Time.deltaTime * cameraSpeed;
         }
         if (Input.GetKeyDown(KeyCode.E) == true) {
             transform.RotateAround(transform.parent.position, transform.parent.up, -90.0f);

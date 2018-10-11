@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ec6124fb5144321aab62201cdb0842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: ffd69f87c8e2b44cb98a4d0c394a6c66, type: 2}
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -292,8 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hexPrefab: {fileID: 1074900997238668, guid: b0fa12c95c0f74490bd062da7dc0bdde, type: 2}
   mainCamera: {fileID: 1946405113}
-  numTilesX: 20
-  numTilesY: 20
+  settings: {fileID: 11400000, guid: ffd69f87c8e2b44cb98a4d0c394a6c66, type: 2}
 --- !u!4 &1139264226
 Transform:
   m_ObjectHideFlags: 0

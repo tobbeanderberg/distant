@@ -7,16 +7,15 @@ public class Map : MonoBehaviour {
     public GameObject hexPrefab;
     public GameObject mainCamera;
 
-    public int numTilesX;
-    public int numTilesY;
+    public GameSettings settings;
 
     float offRowColumnOffset = 0.9f;
     float rowHeight = 1.6f;
     float tileWidth = 1.84f;
 
 	void Start () {
-        for (int x = 0; x < numTilesX; x++) {
-            for (int y = 0; y < numTilesY; y++) {
+        for (int x = 0; x < settings.mapWidth; x++) {
+            for (int y = 0; y < settings.mapHeight; y++) {
                 Instantiate(hexPrefab, 
                             new Vector3(x * tileWidth + PossibleXOffset(y), 
                                         0, 
