@@ -10,16 +10,14 @@ public class Map : MonoBehaviour {
     public GameSettings settings;
 
     float offRowColumnOffset = 0.9f;
-    float rowHeight = 1.6f;
-    float tileWidth = 1.84f;
-
+   
 	void Start () {
         for (int x = 0; x < settings.mapWidth; x++) {
             for (int y = 0; y < settings.mapHeight; y++) {
                 Instantiate(hexPrefab, 
-                            new Vector3(x * tileWidth + PossibleXOffset(y), 
+                            new Vector3(x * settings.tileWidth + PossibleXOffset(y), 
                                         0, 
-                                        (y * rowHeight)), 
+                                        (y * settings.rowHeight)), 
                             Quaternion.identity);
             }
         }

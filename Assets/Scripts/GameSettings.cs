@@ -10,4 +10,6 @@ public class GameSettings : ScriptableObject {
     public int mapWidth;
     public int mapHeight;
 
+    public float tileWidth = 1.84f;
+    public float rowHeight = 1.6f;
 }

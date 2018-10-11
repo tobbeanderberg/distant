@@ -6,10 +6,16 @@ public class CameraController : MonoBehaviour {
 
     public GameSettings settings;
 
-    private Rect bounds = new Rect(new Vector2(3.0f, 3.0f), new Vector2(30.0f, 30.0f));
+    private Rect bounds;
     private float cameraSpeed = 10.0f;
 
-	void Update () {
+    private void Start() {
+        bounds = new Rect(new Vector2(0.0f, 0.0f), 
+                          new Vector2(settings.mapWidth * settings.tileWidth, 
+                                      settings.mapHeight * settings.rowHeight));
+    }
+
+    void Update () {
         if(Input.GetKey(KeyCode.A) == true || Input.GetKey(KeyCode.LeftArrow)) {
             transform.parent.position += -transform.right * Time.deltaTime * cameraSpeed;
         }
