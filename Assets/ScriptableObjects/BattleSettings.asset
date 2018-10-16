@@ -11,5 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c232d20cc7cc4005842b2ced08139b4, type: 3}
   m_Name: BattleSettings
   m_EditorClassIdentifier: 
-  mapWidth: 20
+  mapWidth: 35
   mapHeight: 20
+  tileWidth: 1.84
+  rowHeight: 1.6
