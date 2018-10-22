@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour {
     public GameSettings settings;
 
     private Rect bounds;
-    private float cameraSpeed = 10.0f;
+    private float cameraSpeed = 20.0f;
 
     private void Start() {
         bounds = new Rect(new Vector2(0.0f, 0.0f), 

@@ -1,31 +1,82 @@
 fileFormatVersion: 2
 guid: 297fd40a5e249486eac76a276f9bdcbc
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: Body
     100004: Left Wheelhouse
     100006: Right wheelhouse
+    100008: LB Wheel
+    100010: LF Wheel
+    100012: RB Wheel
+    100014: RF Wheel
+    100016: Bumper
+    100018: LI Light
+    100020: LI Light.001
+    100022: LO Light
+    100024: RO Light
     400000: //RootNode
     400002: Body
     400004: Left Wheelhouse
     400006: Right wheelhouse
+    400008: LB Wheel
+    400010: LF Wheel
+    400012: RB Wheel
+    400014: RF Wheel
+    400016: Bumper
+    400018: LI Light
+    400020: LI Light.001
+    400022: LO Light
+    400024: RO Light
     2100000: Bodypaint
     2100002: Window
     2100004: Material
     2100006: Material.001
+    2100008: Rubber
+    2100010: Rim
+    2100012: BodyPaint
+    2100014: Metal
+    2100016: Grill
+    2100018: Default
+    2100020: Glass
+    2100022: Bumper
+    2100024: Details
     2300000: //RootNode
     2300002: Body
     2300004: Left Wheelhouse
     2300006: Right wheelhouse
+    2300008: LB Wheel
+    2300010: LF Wheel
+    2300012: RB Wheel
+    2300014: RF Wheel
+    2300016: Bumper
+    2300018: LI Light
+    2300020: LI Light.001
+    2300022: LO Light
+    2300024: RO Light
     3300000: //RootNode
     3300002: Body
     3300004: Left Wheelhouse
     3300006: Right wheelhouse
+    3300008: LB Wheel
+    3300010: LF Wheel
+    3300012: RB Wheel
+    3300014: RF Wheel
+    3300016: Bumper
+    3300018: LI Light
+    3300020: LI Light.001
+    3300022: LO Light
+    3300024: RO Light
     4300000: Body
     4300002: Left Wheelhouse
     4300004: Right wheelhouse
+    4300006: RF Wheel
+    4300008: RB Wheel
+    4300010: LB Wheel
+    4300012: LF Wheel
+    4300014: LI Light.001
+    4300016: Bumper
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -58,7 +109,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.4
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -78,6 +129,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

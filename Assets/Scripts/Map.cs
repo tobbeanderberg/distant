@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Map : MonoBehaviour {
 
-    public GameObject hexPrefab;
+    public GameObject hex;
     public GameObject mainCamera;
 
     public GameSettings settings;
 
-    float offRowColumnOffset = 0.9f;
-   
 	void Start () {
         for (int x = 0; x < settings.mapWidth; x++) {
             for (int y = 0; y < settings.mapHeight; y++) {
-                Instantiate(hexPrefab, 
+                Instantiate(hex, 
                             new Vector3(x * settings.tileWidth + PossibleXOffset(y), 
                                         0, 
                                         (y * settings.rowHeight)), 
@@ -29,6 +27,6 @@ public class Map : MonoBehaviour {
     }
 
     private float PossibleXOffset(int row) {
-        return row % 2 == 0 ? 0 : offRowColumnOffset;
+        return row % 2 == 0 ? 0 : settings.tileWidth/2;
     }
 }
